@@ -17,3 +17,9 @@ markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.superfences
+
+# Add this navigation section to the bottom:
+nav:
+  - Home: index.md
+  - Build Logs:
+    - Week 1 - Portfolio Setup: week-01.md

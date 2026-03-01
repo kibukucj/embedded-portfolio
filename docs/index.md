@@ -1,17 +1,29 @@
-# Welcome to MkDocs
+# `> whoami`
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Welcome to my Embedded Systems engineering log. 
 
-## Commands
+> This documentation hub serves as a systematic, version-controlled portfolio tracking my weekly hardware builds, firmware development, and technical training.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+---
 
-## Project layout
+## ⚙️ Core Specs
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+I am currently in my final year of Computer Science at the University of Nairobi. While my broader technical work spans cybersecurity, artificial intelligence, and computer vision, this specific repository is dedicated to the intersection of hardware and software: **IoT, Robotics, and Embedded Systems**.
+
+## 📂 Directory Structure
+
+To keep the documentation systematic, each weekly log is broken down into standard operational components:
+
+* **`Architecture`**: Hardware selection, component lists, and system design.
+* **`Schematics`**: Wiring, signal routing, and power distribution diagrams.
+* **`Source Code`**: Core firmware logic and communication protocols.
+* **`Diagnostics`**: Troubleshooting hardware faults, I2C/SPI conflicts, and logic debugging.
+
+---
+
+## 🚀 Initialization
+
+Ready to explore the logs? 
+
+* Navigate to the **[Week 1: Portfolio Setup](week-01.md)** log to see the CI/CD pipeline and static site generator architecture powering this portfolio.
+* Browse the **Build Logs** in the top navigation menu for the latest hardware updates.
