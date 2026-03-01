@@ -6,11 +6,11 @@ Welcome to my Embedded Systems engineering log.
 
 ---
 
-## ⚙️ Core Specs
+## Core Specs
 
 I am currently in my final year of Computer Science at the University of Nairobi. While my broader technical work spans cybersecurity, artificial intelligence, and computer vision, this specific repository is dedicated to the intersection of hardware and software: **IoT, Robotics, and Embedded Systems**.
 
-## 📂 Directory Structure
+## Directory Structure
 
 To keep the documentation systematic, each weekly log is broken down into standard operational components:
 
@@ -21,7 +21,7 @@ To keep the documentation systematic, each weekly log is broken down into standa
 
 ---
 
-## 🚀 Initialization
+## Initialization
 
 Ready to explore the logs? 
 

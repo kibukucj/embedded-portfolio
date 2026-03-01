@@ -26,3 +26,13 @@ void setup() {
 void loop() {
   // Main logic
 }
+
+## 🐛 Debugging & Challenges
+* What went wrong? (e.g., I2C address conflict, noisy sensor data, power supply dropping under load).
+* How was it resolved?
+
+## 🚀 Final Result
+*Add a final photo of the working build, or embed an unlisted YouTube video showing it in action.*
+
+[![Demo Video](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+*(Replace YOUR_VIDEO_ID with your actual YouTube video ID)*

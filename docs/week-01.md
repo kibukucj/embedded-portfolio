@@ -42,3 +42,15 @@ markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.superfences
+```
+
+
+**2. Deployment Pipeline (`.github/workflows/publish.yml`)**
+This YAML script handles the automation, ensuring the MkDocs build process runs on GitHub's servers every time a commit is pushed to the `main` branch.
+
+## 🐛 Debugging & Challenges
+* **Runner Permissions:** The GitHub Action requires explicit permissions to push the built site back to the repository. This was resolved by adding `permissions: contents: write` to the workflow file.
+* **Branch Routing:** GitHub Pages doesn't automatically know where the finished HTML lives. I had to manually configure the repository settings to point the Pages source to the newly generated `gh-pages` branch.
+
+## 🚀 Final Result
+The CI/CD pipeline is fully operational. The site is live, and future weekly logs now only require duplicating the Markdown template, adding photos, and running a standard Git commit and push sequence.
