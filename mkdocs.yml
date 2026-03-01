@@ -6,8 +6,11 @@ theme:
   name: material
   palette:
     scheme: slate # Defaults to a sleek dark mode
-    primary: teal
+    primary: black
     accent: cyan
+  font:
+    text: Roboto          # Main reading text
+    code: Fira Code       # Terminal/code blocks
   features:
     - navigation.tabs         # Creates top-level navigation
     - content.code.copy       # Adds a copy button to your code blocks

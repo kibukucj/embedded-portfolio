@@ -1,0 +1,17 @@
+/* docs/stylesheets/extra.css */
+
+/* Style blockquotes to look like terminal outputs */
+.md-typeset blockquote {
+    border-left: 4px solid #00E5FF; /* Cyan accent border */
+    background-color: #1A202C;      /* Deep terminal gray/black */
+    color: #A0AEC0;                 /* Muted text color */
+    padding: 15px;
+    border-radius: 4px;
+}
+
+/* Make inline code snippets stand out more */
+.md-typeset code {
+    background-color: #2D3748;
+    color: #00E5FF; /* Cyan text */
+    font-weight: bold;
+}
