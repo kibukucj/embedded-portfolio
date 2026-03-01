@@ -1,0 +1,19 @@
+site_name: June's Embedded Systems Portfolio
+site_description: Weekly hardware builds, code, and logs.
+site_author: Your Name
+
+theme:
+  name: material
+  palette:
+    scheme: slate # Defaults to a sleek dark mode
+    primary: teal
+    accent: cyan
+  features:
+    - navigation.tabs         # Creates top-level navigation
+    - content.code.copy       # Adds a copy button to your code blocks
+    - content.code.annotate   # Allows you to add inline notes to code
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
