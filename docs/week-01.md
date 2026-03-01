@@ -1,37 +1,37 @@
 # Week 1: Portfolio Setup and Automated Deployment
 
-## 🎯 Objective
-Establish a systematic, mobile-responsive portfolio to document my weekly Embedded Systems builds. The goal was to build a friction-free workflow where logging my progress is as simple as writing a Markdown file and pushing code, eliminating the need for manual web design.
+## Objective
+Establish a portfolio to document my weekly Embedded Systems builds. The goal was to build a friction-free workflow where logging my progress is as simple as writing a Markdown file and pushing code.
 
-## 🛠️ Tools & Tech Stack Used
+## Tools & Tech Stack Used
 * **Framework:** MkDocs with the `mkdocs-material` theme.
 * **Environment:** Python virtual environment (`venv`).
 * **Version Control:** Git.
 * **CI/CD & Hosting:** GitHub Actions and GitHub Pages.
 
-## 📐 System Architecture & Workflow
-Instead of physical wiring, this week involved wiring up a deployment pipeline. The architecture relies on a Static Site Generator (SSG) model:
+## System Architecture & Workflow
+This week's work involved wiring up a deployment pipeline. The architecture relies on a Static Site Generator (SSG) model:
 
 1. **Local Authoring:** Write weekly updates in standard `.md` files.
 2. **Version Control:** Run `git push` to send the new logs to the `main` branch.
 3. **Automated Build:** A GitHub Action detects the push, spins up an Ubuntu runner, installs Python and MkDocs, and compiles the Markdown into a static HTML/CSS website.
 4. **Deployment:** The Action pushes the compiled site to a hidden `gh-pages` branch, which GitHub Pages then serves to the live URL.
 
-## 💻 Code Implementation
+## Code Implementation
 Two core configuration files drive this setup.
 
 **1. Site Configuration (`mkdocs.yml`)**
 This dictates the site's structure, theme, and features, including syntax highlighting for future C/MicroPython code:
 
 ```yaml
-site_name: Embedded Systems Portfolio
-site_description: Weekly hardware builds, code, and logs.
+site_name: June's Embedded Systems Portfolio
+site_description: Weekly Hardware Builds, Code, and Logs.
 
 theme:
   name: material
   palette:
     scheme: slate
-    primary: teal
+    primary: black
     accent: cyan
   features:
     - navigation.tabs
@@ -48,9 +48,40 @@ markdown_extensions:
 **2. Deployment Pipeline (`.github/workflows/publish.yml`)**
 This YAML script handles the automation, ensuring the MkDocs build process runs on GitHub's servers every time a commit is pushed to the `main` branch.
 
-## 🐛 Debugging & Challenges
+```yaml
+name: publish
+on:
+  push:
+    branches:
+      - main
+permissions:
+  contents: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure Git Credentials
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV 
+      - uses: actions/cache@v4
+        with:
+          key: mkdocs-material-${{ env.cache_id }}
+          path: .cache
+          restore-keys: |
+            mkdocs-material-
+      - run: pip install mkdocs-material 
+      - run: mkdocs gh-deploy --force
+```
+
+## Debugging & Challenges
 * **Runner Permissions:** The GitHub Action requires explicit permissions to push the built site back to the repository. This was resolved by adding `permissions: contents: write` to the workflow file.
 * **Branch Routing:** GitHub Pages doesn't automatically know where the finished HTML lives. I had to manually configure the repository settings to point the Pages source to the newly generated `gh-pages` branch.
 
-## 🚀 Final Result
+## Final Result
 The CI/CD pipeline is fully operational. The site is live, and future weekly logs now only require duplicating the Markdown template, adding photos, and running a standard Git commit and push sequence.

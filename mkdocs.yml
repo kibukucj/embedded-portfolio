@@ -1,16 +1,16 @@
 site_name: June's Embedded Systems Portfolio
-site_description: Weekly hardware builds, code, and logs.
-site_author: Your Name
+site_description: Weekly Hardware Builds, Code, and Logs.
+site_author: Kibuku Carole June Wanjiku
 
 theme:
   name: material
   palette:
-    scheme: slate # Defaults to a sleek dark mode
+    scheme: slate             # Defaults to dark mode
     primary: black
     accent: cyan
   font:
-    text: Roboto          # Main reading text
-    code: Fira Code       # Terminal/code blocks
+    text: Roboto              # Main reading text
+    code: Fira Code           # Terminal/code blocks
   features:
     - navigation.tabs         # Creates top-level navigation
     - content.code.copy       # Adds a copy button to your code blocks
@@ -21,8 +21,12 @@ markdown_extensions:
       anchor_linenums: true
   - pymdownx.superfences
 
-# Add this navigation section to the bottom:
+# Navigation Section
 nav:
   - Home: index.md
   - Build Logs:
     - Week 1 - Portfolio Setup: week-01.md
+
+# Style Section
+extra_css:
+  - stylesheets/extra.css

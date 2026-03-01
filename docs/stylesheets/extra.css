@@ -1,17 +1,75 @@
 /* docs/stylesheets/extra.css */
 
-/* Style blockquotes to look like terminal outputs */
-.md-typeset blockquote {
-    border-left: 4px solid #00E5FF; /* Cyan accent border */
-    background-color: #1A202C;      /* Deep terminal gray/black */
-    color: #A0AEC0;                 /* Muted text color */
-    padding: 15px;
-    border-radius: 4px;
+/* 1. Import 'Fira Code' - a very clean, tech-focused monospace font */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
+
+/* 2. Global tweaks for sharper text */
+body {
+    -webkit-font-smoothing: antialiased;
 }
 
-/* Make inline code snippets stand out more */
-.md-typeset code {
-    background-color: #2D3748;
-    color: #00E5FF; /* Cyan text */
+/* 3. The Navigation Bar - Darken it to match the minimalistic vibe */
+.md-header {
+    background-color: #0d1117 !important; /* Deep space black */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* 4. Terminal-Style Blockquotes */
+.md-typeset blockquote {
+    background-color: #0d1117; 
+    border-left: 3px solid #00E5FF; /* Cyan accent border */
+    color: #A0AEC0;                 /* Muted gray text */
+    padding: 1rem 1.5rem;
+    border-radius: 4px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9em;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Inject a terminal prompt into the blockquote */
+.md-typeset blockquote p::before {
+    content: "~$ ";
+    color: #00E5FF;
     font-weight: bold;
+}
+
+/* 5. Minimalist Headers */
+.md-typeset h1, .md-typeset h2, .md-typeset h3 {
+    color: #e6edf3;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.md-typeset h2 {
+    border-bottom: 1px solid #30363d; /* Subtle divider under H2s */
+    padding-bottom: 0.3em;
+}
+
+/* 6. Code Blocks & Inline Code */
+.md-typeset pre > code {
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    font-family: 'Fira Code', monospace;
+}
+
+.md-typeset code {
+    background-color: #161b22;
+    color: #00E5FF; 
+    border-radius: 3px;
+    padding: 0.2em 0.4em;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85em;
+}
+
+/* 7. Hyperlinks - Add a subtle neon hover effect */
+.md-typeset a {
+    color: #00E5FF;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.md-typeset a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(0, 229, 255, 0.6); /* Cyan glow */
 }
