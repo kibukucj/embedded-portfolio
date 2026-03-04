@@ -25,7 +25,12 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Build Logs:
-    - Week 1 - Portfolio Setup: week-01.md
+    - Week 1:
+      - Friday: week01/friday.md
+    - Week 2:
+      - Monday: week02/monday.md
+      - Wednesday: week02/wednesday.md
+      - Friday: week02/friday.md
 
 # Style Section
 extra_css:

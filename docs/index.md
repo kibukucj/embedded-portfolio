@@ -1,6 +1,6 @@
 # `> whoami`
 
-Welcome to my Embedded Systems engineering log. 
+My name is June, welcome to my Embedded Systems Engineering Log! 
 
 > This documentation hub serves as a systematic, version-controlled portfolio tracking my weekly hardware builds, firmware development, and technical training.
 
@@ -25,5 +25,5 @@ To keep the documentation systematic, each weekly log is broken down into standa
 
 Ready to explore the logs? 
 
-* Navigate to the **[Week 1: Portfolio Setup](week-01.md)** log to see the CI/CD pipeline and static site generator architecture powering this portfolio.
+* Navigate to the **[Week 1: Portfolio Setup](week01/friday.md)** log to see the CI/CD pipeline and static site generator architecture powering this portfolio.
 * Browse the **Build Logs** in the top navigation menu for the latest hardware updates.
