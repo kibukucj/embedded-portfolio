@@ -1,4 +1,4 @@
-# Week 2: Version Control and Collaborative Workflows
+# Week 2 (Monday): Version Control and Collaborative Workflows
 
 ## Objective
 Master the fundamentals of Git and GitHub to transition from localized file management to a robust, cloud-backed version control system.
