@@ -20,6 +20,8 @@ markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.superfences
+  - pymdownx.arithmatex:     # Add this line
+      generic: true
 
 # Navigation Section
 nav:
@@ -31,7 +33,12 @@ nav:
       - Monday: week02/monday.md
       - Wednesday: week02/wednesday.md
       - Friday: week02/friday.md
+      - Assignment: week02/assignment.md
 
 # Style Section
 extra_css:
   - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
