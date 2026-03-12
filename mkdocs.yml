@@ -34,6 +34,10 @@ nav:
       - Wednesday: week02/wednesday.md
       - Friday: week02/friday.md
       - Assignment: week02/assignment.md
+    - Week 3:
+      - Monday: week03/monday.md
+      - Wednesday: week03/wednesday.md
+      - Friday: week03/friday.md
 
 # Style Section
 extra_css:

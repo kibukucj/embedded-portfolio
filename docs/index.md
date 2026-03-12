@@ -1,14 +1,10 @@
 # `> whoami`
 
-My name is June, welcome to my Embedded Systems Engineering Log! 
+> My name is June, welcome to my Embedded Systems Engineering Log! 
 
 > This documentation hub serves as a systematic, version-controlled portfolio tracking my weekly hardware builds, firmware development, and technical training.
 
 ---
-
-## Core Specs
-
-I am currently in my final year of Computer Science at the University of Nairobi. While my broader technical work spans cybersecurity, artificial intelligence, and computer vision, this specific repository is dedicated to the intersection of hardware and software: **IoT, Robotics, and Embedded Systems**.
 
 ## Directory Structure
 

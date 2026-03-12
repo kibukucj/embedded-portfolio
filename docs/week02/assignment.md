@@ -1,7 +1,7 @@
 # Assignment: Object-Oriented Shape Area Calculator
 
 ## Objective
-To build a modular geometry calculator using Python.
+> To build a modular geometry calculator using Python.
 
 ## Mathematical Formulas Implemented
 The following area calculations are embedded into the class methods:

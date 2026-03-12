@@ -1,7 +1,7 @@
 # Week 2 (Friday): Architecture, Bare Metal, and the Software-Hardware Bridge
 
 ## Objective
-Trace the execution path of embedded firmware from high-level abstractions down to physical voltage changes. The ultimate, foundational rule of this domain established today is: **Every hardware component is controlled by writing to memory.** 
+> Trace the execution path of embedded firmware from high-level abstractions down to physical voltage changes. The ultimate, foundational rule of this domain established today is: **Every hardware component is controlled by writing to memory.** 
 
 ## System Architecture & Low-Level Execution
 To write effective firmware, we must understand the silicon executing it.

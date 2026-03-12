@@ -1,7 +1,7 @@
 # Week 2 (Monday): Version Control and Collaborative Workflows
 
 ## Objective
-Master the fundamentals of Git and GitHub to transition from localized file management to a robust, cloud-backed version control system.
+> Master the fundamentals of Git and GitHub to transition from localized file management to a robust, cloud-backed version control system.
 
 ## Tools & Tech Stack Used
 * **CLI Engine:** Git (Command Line Interface)

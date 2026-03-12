@@ -1,7 +1,7 @@
 # Week 1: Portfolio Setup and Automated Deployment
 
 ## Objective
-Establish a portfolio to document my weekly Embedded Systems builds. The goal was to build a friction-free workflow where logging my progress is as simple as writing a Markdown file and pushing code.
+> Establish a portfolio to document my weekly Embedded Systems builds. The goal was to build a friction-free workflow where logging my progress is as simple as writing a Markdown file and pushing code.
 
 ## Tools & Tech Stack Used
 * **Framework:** MkDocs with the `mkdocs-material` theme.
