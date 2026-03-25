@@ -1,4 +1,4 @@
-site_name: June's Embedded Systems Portfolio
+site_name: June's IoT Portfolio
 site_description: Weekly Hardware Builds, Code, and Logs.
 site_author: Kibuku Carole June Wanjiku
 
@@ -40,6 +40,10 @@ nav:
     - Week 4:
       - Monday: week04/monday.md
       - Wednesday: week04/wednesday.md
+    - Week 5:
+      - Monday: week05/monday.md
+      - Wednesday: week05/wednesday.md
+      - Friday: week05/friday.md
 
 # Style Section
 extra_css:
