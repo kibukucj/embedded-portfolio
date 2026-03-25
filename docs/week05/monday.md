@@ -1,4 +1,4 @@
-# Week 4 (Monday): Digital Inputs and State Logic
+# Week 5 (Monday): Digital Inputs and State Logic
 
 ## Objective
 > To design an interactive control panel using an Arduino UNO. This assignment focuses on reading digital inputs from push buttons, understanding the necessity of pull-down resistors, and writing conditional firmware to handle both momentary and toggled state changes.
@@ -6,7 +6,7 @@
 ## Circuit Design & Simulation
 The hardware was prototyped and simulated using TinkerCAD. 
 
-**[View the interactive TinkerCAD simulation here](https://www.tinkercad.com/things/hQGLti0kJuM-week05monday)**
+**[View my interactive TinkerCAD simulation here](https://www.tinkercad.com/things/hQGLti0kJuM-week05monday)**
 
 ### Hardware Requirements
 * 1 × Arduino UNO
