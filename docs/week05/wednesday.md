@@ -64,5 +64,6 @@ I2C is a synchronous, serial communication protocol where data is transferred bi
 
 ### 4. Wi-Fi
 Wi-Fi enables devices to connect to external networks as clients or host networks as servers.
+
 * It operates on standard 802.11 protocols across 2.4 GHz and 5 GHz frequencies.
 * In the context of IoT and microcontrollers, Wi-Fi communication often involves higher-level protocols like HTTP or MQTT, providing standard ways to send and receive data over the internet.
