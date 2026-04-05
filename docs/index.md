@@ -1,25 +1,20 @@
 # `> whoami`
 
-> My name is June, welcome to my Embedded Systems Engineering Log! 
-
-> This documentation hub serves as a systematic, version-controlled portfolio tracking my weekly hardware builds, firmware development, and technical training.
+> My name is June, welcome to my embedded systems engineering log! This documentation hub tracks my weekly hardware builds, firmware development, and technical training. 
 
 ---
 
 ## Directory Structure
 
-To keep the documentation systematic, each weekly log is broken down into standard operational components:
+To keep the documentation systematic, each weekly log is broken down into standard components(for the most part, lol 💀):
 
-* **`Architecture`**: Hardware selection, component lists, and system design.
-* **`Schematics`**: Wiring, signal routing, and power distribution diagrams.
-* **`Source Code`**: Core firmware logic and communication protocols.
-* **`Diagnostics`**: Troubleshooting hardware faults, I2C/SPI conflicts, and logic debugging.
+* **`Objective`**: The goal of the lesson.
+* **`Hardware Theory`**: How a component works the way it does.
+* **`Source Code`**: The code that executes to bring out the desired behaviour.
+* **`Core Concepts Mastered`**: Key takeaways from interacting with said component.
 
 ---
 
-## Initialization
+## Ready to explore? 
 
-Ready to explore the logs? 
-
-* Navigate to the **[Week 1: Portfolio Setup](week01/friday.md)** log to see the CI/CD pipeline and static site generator architecture powering this portfolio.
-* Browse the **Build Logs** in the top navigation menu for the latest hardware updates.
+* Use the navbar on the left to navigate to whichever place pleases your heart 😂.

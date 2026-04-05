@@ -25,9 +25,9 @@ markdown_extensions:
 
 # Navigation Section
 nav:
-  - Home: index.md
   - Build Logs:
     - Week 1:
+      - Intro: index.md
       - Friday: week01/friday.md
     - Week 2:
       - Monday: week02/monday.md
@@ -43,7 +43,12 @@ nav:
     - Week 5:
       - Monday: week05/monday.md
       - Wednesday: week05/wednesday.md
-      - Friday: week05/friday.md
+    - Week 6:
+      - Monday: week06/monday.md
+      - Wednesday: week06/wednesday.md
+    - Week 7:
+      - Wednesday: week07/wednesday.md
+      - Friday: week07/friday.md
 
 # Style Section
 extra_css:
