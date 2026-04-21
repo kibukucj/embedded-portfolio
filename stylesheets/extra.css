@@ -1,0 +1,524 @@
+/* ============================================================
+   JUNE'S EMBEDDED SYSTEMS PORTFOLIO — extra.css
+   Theme: CRT Terminal / Deep-Space Engineering Log
+   Palette: Void Black | Signal Cyan | Ghost White | Amber Warn
+   ============================================================ */
+
+/* ── 0. FONTS ─────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* ── 1. DESIGN TOKENS ─────────────────────────────────────── */
+:root {
+  --void:        #080b10;       /* deepest background */
+  --surface:     #0d1117;       /* card / panel background */
+  --surface-2:   #111820;       /* slightly lighter surface */
+  --border:      #1e2a35;       /* subtle structural borders */
+  --border-hi:   #2a3f52;       /* highlighted border */
+
+  --cyan:        #00e5ff;       /* primary accent */
+  --cyan-dim:    #007a8a;       /* muted accent */
+  --cyan-glow:   rgba(0, 229, 255, 0.18);
+  --cyan-glow-sm:rgba(0, 229, 255, 0.08);
+
+  --amber:       #ffb300;       /* warning / highlight accent */
+  --amber-dim:   rgba(255, 179, 0, 0.12);
+
+  --ghost:       #e6edf3;       /* primary text */
+  --muted:       #7d8fa3;       /* secondary text */
+  --faint:       #3d4f61;       /* very muted — decorative only */
+
+  --mono:        'Fira Code', 'Space Mono', monospace;
+  --radius:      4px;
+  --radius-lg:   8px;
+}
+
+/* ── 2. GLOBAL ─────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px; /* Base scale — everything rem-based cascades from here */
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--void);
+  font-size: 0.875rem; /* ~11.4px — tighter, more technical */
+  /* Subtle scanline texture — the CRT soul of this theme */
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.06) 2px,
+    rgba(0, 0, 0, 0.06) 4px
+  );
+}
+
+/* ── 3. HEADER / NAV BAR ──────────────────────────────────── */
+.md-header {
+  background-color: var(--void) !important;
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.9), 0 1px 0 var(--cyan-dim);
+}
+
+/* Site title — stamp it in mono */
+.md-header__title {
+  font-family: var(--mono) !important;
+  font-size: 0.78rem !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase;
+  color: var(--cyan) !important;
+}
+
+/* Top-level tabs */
+.md-tabs {
+  background-color: var(--surface) !important;
+  border-bottom: 1px solid var(--border);
+}
+
+.md-tabs__link {
+  font-family: var(--mono) !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted) !important;
+  opacity: 1 !important;
+  transition: color 0.2s ease;
+}
+
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  color: var(--cyan) !important;
+}
+
+/* ── 4. SIDEBAR / NAVIGATION ──────────────────────────────── */
+.md-sidebar {
+  background-color: var(--void);
+  border-right: 1px solid var(--border);
+}
+
+/* Nav section labels */
+.md-nav__title {
+  font-family: var(--mono) !important;
+  font-size: 0.65rem !important;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--faint) !important;
+  padding-top: 1.4rem;
+}
+
+/* Nav links */
+.md-nav__link {
+  font-family: var(--mono) !important;
+  font-size: 0.78rem !important;
+  color: var(--muted) !important;
+  letter-spacing: 0.02em;
+  transition: color 0.15s ease, padding-left 0.15s ease;
+  border-radius: var(--radius);
+}
+
+.md-nav__link:hover {
+  color: var(--cyan) !important;
+  padding-left: 0.6rem;
+}
+
+.md-nav__link--active {
+  color: var(--cyan) !important;
+  background: var(--cyan-glow-sm) !important;
+  border-left: 2px solid var(--cyan);
+  padding-left: 0.5rem;
+}
+
+/* ── 5. MAIN CONTENT AREA ─────────────────────────────────── */
+.md-main {
+  background-color: var(--void);
+}
+
+.md-content {
+  background-color: transparent;
+  max-width: 1100px;
+}
+
+/* Article wrapper — subtle left accent line */
+.md-content__inner {
+  padding: 2rem 2.4rem 3rem;
+  border-left: 1px solid var(--border);
+  margin-left: 1rem;
+}
+
+/* Widen the overall grid so content can breathe */
+.md-grid {
+  max-width: 1440px;
+}
+
+/* ── 6. TYPOGRAPHY ────────────────────────────────────────── */
+
+/* H1 — the whoami moment */
+.md-typeset h1 {
+  font-family: var(--mono) !important;
+  font-size: 1.45rem !important;
+  font-weight: 600;
+  color: var(--ghost) !important;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.2rem;
+
+  /* Glowing underline drawn with a gradient */
+  padding-bottom: 0.5rem;
+  border-bottom: none;
+  background-image: linear-gradient(90deg, var(--cyan), transparent 70%);
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+  background-position: 0 100%;
+}
+
+/* H2 — section divider */
+.md-typeset h2 {
+  font-family: var(--mono) !important;
+  font-size: 0.85rem !important;
+  font-weight: 500;
+  color: var(--ghost) !important;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-top: 3rem;
+  padding-bottom: 0.4em;
+  border-bottom: 1px solid var(--border) !important;
+
+  /* Small cyan label before H2 */
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.md-typeset h2::before {
+  content: "//";
+  color: var(--cyan);
+  font-size: 1em;
+  opacity: 0.7;
+  font-weight: 300;
+}
+
+/* H3 */
+.md-typeset h3 {
+  font-family: var(--mono) !important;
+  font-size: 0.72rem !important;
+  font-weight: 600;
+  color: var(--cyan) !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 2rem;
+}
+
+.md-typeset h3::before {
+  content: "› ";
+  opacity: 0.6;
+}
+
+/* Body text */
+.md-typeset p,
+.md-typeset li {
+  font-size: 0.8rem;
+  line-height: 1.85;
+  color: #b0bec9;
+  letter-spacing: 0.01em;
+}
+
+/* ── 7. HORIZONTAL RULE ───────────────────────────────────── */
+.md-typeset hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, var(--cyan-dim), var(--border), transparent);
+  margin: 2.5rem 0;
+}
+
+/* ── 8. BLOCKQUOTE — TERMINAL DIRECTIVE ──────────────────── */
+.md-typeset blockquote {
+  background-color: var(--surface);
+  border-left: 3px solid var(--cyan) !important;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  font-family: var(--mono);
+  font-size: 0.85em;
+  color: var(--muted);
+  box-shadow:
+    inset 0 0 30px rgba(0, 0, 0, 0.4),
+    0 0 0 1px var(--border);
+  position: relative;
+}
+
+/* Top-right corner label */
+.md-typeset blockquote::before {
+  content: "STDERR";
+  position: absolute;
+  top: 0.4rem;
+  right: 0.8rem;
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: var(--faint);
+}
+
+/* Terminal prompt prefix */
+.md-typeset blockquote p::before {
+  content: "~$ ";
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+/* ── 9. CODE — INLINE ─────────────────────────────────────── */
+.md-typeset code:not(pre code) {
+  background-color: var(--surface-2);
+  color: var(--cyan);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.15em 0.45em;
+  font-family: var(--mono);
+  font-size: 0.83em;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* ── 10. CODE — BLOCK ─────────────────────────────────────── */
+.md-typeset pre {
+  background-color: var(--surface) !important;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow:
+    0 0 0 1px var(--border-hi),
+    0 8px 32px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255,255,255,0.03);
+  position: relative;
+  overflow: visible;
+  margin: 1.5rem 0;
+}
+
+/* "window chrome" dots — tiny cosmetic detail */
+.md-typeset pre::before {
+  content: "● ● ●";
+  position: absolute;
+  top: -1.8rem;
+  left: 0;
+  font-size: 0.55rem;
+  letter-spacing: 0.3em;
+  color: var(--faint);
+  pointer-events: none;
+}
+
+.md-typeset pre > code {
+  background: transparent !important;
+  font-family: var(--mono) !important;
+  font-size: 0.82rem !important;
+  line-height: 1.7;
+  color: #c9d1d9;
+  padding: 1.2rem 1.4rem !important;
+  border-radius: var(--radius-lg);
+  display: block;
+}
+
+/* Syntax token overrides for extra punch */
+.highlight .k,
+.highlight .kd,
+.highlight .kn { color: var(--cyan) !important; }
+.highlight .s,
+.highlight .s1,
+.highlight .s2 { color: #7ee787 !important; }
+.highlight .c,
+.highlight .cm,
+.highlight .c1 { color: var(--faint) !important; font-style: italic; }
+.highlight .n,
+.highlight .nv  { color: var(--ghost) !important; }
+.highlight .m,
+.highlight .mi  { color: var(--amber) !important; }
+
+/* ── 11. COPY BUTTON ──────────────────────────────────────── */
+.md-clipboard {
+  color: var(--faint) !important;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.md-clipboard:hover {
+  color: var(--cyan) !important;
+  transform: scale(1.1);
+}
+
+/* ── 12. TABLES ───────────────────────────────────────────── */
+.md-typeset table:not([class]) {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+}
+
+.md-typeset table:not([class]) thead th {
+  background-color: var(--surface-2);
+  color: var(--cyan);
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border-hi);
+  padding: 0.75rem 1rem;
+}
+
+.md-typeset table:not([class]) tbody tr {
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s ease;
+}
+
+.md-typeset table:not([class]) tbody tr:hover {
+  background-color: var(--cyan-glow-sm);
+}
+
+.md-typeset table:not([class]) td {
+  color: var(--muted);
+  padding: 0.65rem 1rem;
+}
+
+/* ── 13. HYPERLINKS ───────────────────────────────────────── */
+.md-typeset a {
+  color: var(--cyan);
+  text-decoration: none;
+  border-bottom: 1px solid var(--cyan-dim);
+  transition: color 0.2s ease, border-color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.md-typeset a:hover {
+  color: #ffffff;
+  border-bottom-color: var(--cyan);
+  text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+}
+
+/* ── 14. LISTS ─────────────────────────────────────────────── */
+.md-typeset ul > li::marker {
+  color: var(--cyan);
+  content: "▸ ";
+}
+
+.md-typeset ol > li::marker {
+  color: var(--cyan);
+  font-family: var(--mono);
+  font-size: 0.8em;
+}
+
+/* ── 15. ADMONITIONS / CALLOUT BOXES ─────────────────────── */
+.md-typeset .admonition {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background-color: var(--surface);
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.md-typeset .admonition-title {
+  font-family: var(--mono) !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* NOTE */
+.md-typeset .admonition.note {
+  border-left-color: var(--cyan);
+}
+.md-typeset .admonition.note > .admonition-title {
+  background-color: var(--cyan-glow-sm);
+  color: var(--cyan);
+}
+
+/* WARNING */
+.md-typeset .admonition.warning {
+  border-left-color: var(--amber);
+}
+.md-typeset .admonition.warning > .admonition-title {
+  background-color: var(--amber-dim);
+  color: var(--amber);
+}
+
+/* ── 16. FOOTER ────────────────────────────────────────────── */
+.md-footer {
+  background-color: var(--void);
+  border-top: 1px solid var(--border);
+}
+
+.md-footer-meta {
+  background-color: var(--void);
+}
+
+.md-footer__link {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  color: var(--muted) !important;
+  transition: color 0.2s;
+}
+
+.md-footer__link:hover {
+  color: var(--cyan) !important;
+}
+
+/* ── 17. SCROLLBAR — BECAUSE DETAILS MATTER ───────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--void);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-hi);
+  border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cyan-dim);
+}
+
+/* ── 18. SEARCH ────────────────────────────────────────────── */
+.md-search__form {
+  background-color: var(--surface-2) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+}
+
+.md-search__input {
+  font-family: var(--mono) !important;
+  font-size: 0.8rem !important;
+  color: var(--ghost) !important;
+}
+
+.md-search__input::placeholder {
+  color: var(--faint) !important;
+  font-family: var(--mono) !important;
+}
+
+.md-search-result__article {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+}
+
+/* ── 19. PROGRESS INDICATOR — READING POSITION ───────────── */
+.md-header__inner::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--cyan), var(--cyan-dim), transparent);
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* ── 20. SELECTION COLOR ──────────────────────────────────── */
+::selection {
+  background: var(--cyan-glow);
+  color: var(--ghost);
+}
