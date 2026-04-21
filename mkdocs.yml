@@ -50,6 +50,15 @@ nav:
     - Week 7:
       - Wednesday: week07/wednesday.md
       - Friday: week07/friday.md
+    - Week 8:
+      - Monday: week08/monday.md
+      - Wednesday: week08/wednesday.md
+      - Friday: week08/friday.md
+    - Week 9:
+      - Proposal: week09/proposal.md
+      - Monday: week09/monday.md
+      - Wednesday: week09/wednesday.md
+      - Friday: week09/friday.md
 
 # Style Section
 extra_css:
