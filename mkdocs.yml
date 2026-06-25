@@ -1,64 +1,57 @@
 site_name: June's IoT Portfolio
-site_description: Weekly Hardware Builds, Code, and Logs.
+site_description: An Embedded Systems Field Journal — organized by theme, not by week.
 site_author: Kibuku Carole June Wanjiku
 
 theme:
   name: material
   palette:
-    scheme: slate             # Defaults to dark mode
-    primary: black
-    accent: cyan
+    scheme: slate
+    primary: custom
+    accent: custom
   font:
-    text: Roboto              # Main reading text
-    code: Fira Code           # Terminal/code blocks
+    text: Literata              # Warm editorial serif for body copy
+    code: Space Mono             # Typewriter-style mono for code blocks
   features:
-    - navigation.tabs         # Creates top-level navigation
-    - content.code.copy       # Adds a copy button to your code blocks
-    - content.code.annotate   # Allows you to add inline notes to code
+    - navigation.tabs           # Creates top-level navigation (one tab per theme)
+    - navigation.tabs.sticky
+    - navigation.indexes
+    - content.code.copy         # Adds a copy button to your code blocks
+    - content.code.annotate      # Allows you to add inline notes to code
 
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.superfences
-  - pymdownx.arithmatex:     # Add this line
+  - pymdownx.arithmatex:
       generic: true
+  - attr_list                   # Lets us add classes (e.g. for the week-tag stamps)
+  - md_in_html
 
-# Navigation Section
+# Navigation Section — grouped by theme/topic instead of by week
 nav:
-  - Build Logs:
-    - Week 1:
-      - Intro: index.md
-      - Friday: week01/friday.md
-    - Week 2:
-      - Monday: week02/monday.md
-      - Wednesday: week02/wednesday.md
-      - Friday: week02/friday.md
-      - Assignment: week02/assignment.md
-    - Week 3:
-      - Monday: week03/monday.md
-      - Wednesday: week03/wednesday.md
-    - Week 4:
-      - Monday: week04/monday.md
-      - Wednesday: week04/wednesday.md
-    - Week 5:
-      - Monday: week05/monday.md
-      - Wednesday: week05/wednesday.md
-    - Week 6:
-      - Monday: week06/monday.md
-      - Extra: week06/extra.md
-      - Wednesday: week06/wednesday.md
-    - Week 7:
-      - Wednesday: week07/wednesday.md
-      - Friday: week07/friday.md
-    - Week 8:
-      - Monday: week08/monday.md
-      - Wednesday: week08/wednesday.md
-      - Friday: week08/friday.md
-    - Week 9:
-      - Proposal: week09/proposal.md
-      - Monday: week09/monday.md
-      - Wednesday: week09/wednesday.md
-      - Friday: week09/friday.md
+  - Home: index.md
+  - Foundations:
+    - Overview: foundations/portfolio-setup.md
+    - Hardware Fundamentals: foundations/hardware-fundamentals.md
+    - Architecture & Bare Metal: foundations/architecture-bare-metal.md
+    - Version Control: foundations/version-control.md
+  - Code & Logic:
+    - OOP Shapes (Python): code-and-logic/oop-shapes-python.md
+    - C Fundamentals: code-and-logic/c-fundamentals.md
+    - Modular C & Compilation: code-and-logic/modular-c-compilation.md
+    - Data Structures & Memory: code-and-logic/data-structures-memory.md
+  - Inputs & Control:
+    - Buttons & State Logic: inputs-and-control/buttons-state-logic.md
+    - Traffic Light Controller: inputs-and-control/traffic-light-controller.md
+  - Sensing the World:
+    - DHT22 Temp & Humidity: sensing-the-world/dht22-temperature-humidity.md
+    - Ultrasonic Distance: sensing-the-world/ultrasonic-distance.md
+  - Going Wireless:
+    - Serial Protocols (SPI/UART/I2C): going-wireless/serial-protocols.md
+    - Pico W & Wi-Fi Init: going-wireless/picow-wifi-init.md
+  - Capstone Project:
+    - Attendace Tracker: capstone/attendance.md
+    - Tracker Code: capstone/attendance-code.md
 
 # Style Section
 extra_css:

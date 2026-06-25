@@ -1,4 +1,6 @@
-# Week 6 (Extra): Traffic Light Controller
+# Traffic Light Controller
+
+<span class="week-tag">Week 06 · Extra</span>
 
 ## Objective
 > To design, wire, and program a physical traffic light sequence using a Raspberry Pi Pico W. 

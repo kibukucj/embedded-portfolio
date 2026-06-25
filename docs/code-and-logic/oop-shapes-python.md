@@ -1,4 +1,6 @@
-# Assignment: Object-Oriented Shape Area Calculator
+# Object-Oriented Shape Area Calculator (Python)
+
+<span class="week-tag">Week 02 · Assignment</span>
 
 ## Objective
 > To build a modular geometry calculator using Python.

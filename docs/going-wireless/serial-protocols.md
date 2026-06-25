@@ -1,4 +1,6 @@
-# Week 5 (Wednesday): Microcontroller Connectivity & Communication Protocols
+# Microcontroller Connectivity & Communication Protocols
+
+<span class="week-tag">Week 05 · Wednesday</span>
 
 ## Objective
 > To understand the fundamental methods by which microcontrollers talk to each other and external peripherals. This session covered general hardware concepts and took a deep dive into serial communication protocols (SPI, UART, I2C) and Wi-Fi.

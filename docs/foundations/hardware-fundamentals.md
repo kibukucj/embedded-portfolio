@@ -1,4 +1,6 @@
-# Week 2 (Wednesday): Hardware Fundamentals
+# Hardware Fundamentals
+
+<span class="week-tag">Week 02 · Wednesday</span>
 
 ## Objective
 > Establish a foundational understanding of embedded hardware architecture. The goal was to evaluate chip selection for specific project scopes, and set up the physical prototyping environment.

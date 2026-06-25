@@ -1,4 +1,6 @@
-# Week 6 (Wednesday): The Ultrasonic Sensor
+# The Ultrasonic Sensor
+
+<span class="week-tag">Week 06 · Wednesday</span>
 
 ## Objective
 > To interface an HC-SR04 ultrasonic distance sensor with the Raspberry Pi Pico W using CircuitPython. The goal was to understand acoustic physics ("Time-of-Flight" calculations), manage sensor libraries, and safely handle mixed-voltage logic levels.

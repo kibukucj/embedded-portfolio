@@ -1,4 +1,6 @@
-# Week 3 (Wednesday): Modular Geometry Calculator (C Implementation)
+# Modular Geometry Calculator (C Implementation)
+
+<span class="week-tag">Week 03 · Wednesday</span>
 
 ## Objective
 > To implement a geometry area calculator in C, emphasizing the separation of implementation from execution. This assignment focuses on low-level compilation workflows, demonstrating how to use function prototypes, generate object files, and link them into a final executable.

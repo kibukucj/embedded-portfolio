@@ -1,4 +1,6 @@
-# Week 1: Portfolio Setup and Automated Deployment
+# Portfolio Setup and Automated Deployment
+
+<span class="week-tag">Week 01 · Friday</span>
 
 ## Objective
 > Establish a portfolio to document my weekly Embedded Systems builds. The goal was to build a friction-free workflow where logging my progress is as simple as writing a Markdown file and pushing code.

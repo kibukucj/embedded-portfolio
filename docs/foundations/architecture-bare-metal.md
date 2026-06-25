@@ -1,4 +1,6 @@
-# Week 2 (Friday): Architecture, Bare Metal, and the Software-Hardware Bridge
+# Architecture, Bare Metal, and the Software-Hardware Bridge
+
+<span class="week-tag">Week 02 · Friday</span>
 
 ## Objective
 > Trace the execution path of embedded firmware from high-level abstractions down to physical voltage changes. The ultimate, foundational rule of this domain established today is: **Every hardware component is controlled by writing to memory.** 

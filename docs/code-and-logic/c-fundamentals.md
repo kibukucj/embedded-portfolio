@@ -1,4 +1,6 @@
-# Week 3 (Monday): C Fundamentals and String Handling
+# C Fundamentals and String Handling
+
+<span class="week-tag">Week 03 · Monday</span>
 
 ## Objective
 > Establish the foundational syntax of C programming. The goal was to write a basic execution thread, manage fixed-memory character arrays, and utilize formatted standard output.

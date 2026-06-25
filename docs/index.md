@@ -1,20 +1,18 @@
 # `> whoami`
 
-> My name is June, welcome to my embedded systems engineering log! This documentation hub tracks my weekly hardware builds, firmware development, and technical training. 
+> My name is June, welcome to my embedded systems engineering log! This documentation hub tracks my weekly hardware builds and technical training.
 
 ---
 
-## Directory Structure
+## The Sections
 
-To keep the documentation systematic, each weekly log is broken down into standard components(for the most part, lol 💀):
+* **Foundations:** tooling, version control and hardware fundamentals.
+* **Code & Logic:** C and Python fundamentals, memory management, and modular program design.
+* **Inputs & Control:** buttons, state machines, and physical output sequencing.
+* **Sensing the World:** some sensors plus the timing tricks that make them reliable.
+* **Going Wireless:** serial protocols (SPI/UART/I2C) and bringing Wi-Fi-capable boards online.
+* **Capstone Project:** the culminating project that ties the skills together.
 
-* **`Objective`**: The goal of the lesson.
-* **`Hardware Theory`**: How a component works the way it does.
-* **`Source Code`**: The code that executes to bring out the desired behaviour.
-* **`Core Concepts Mastered`**: Key takeaways from interacting with said component.
+## Ready to explore?
 
----
-
-## Ready to explore? 
-
-* Use the navbar on the left to navigate to whichever place pleases your heart 😂.
+Select any topic at the top navigation bar and enjoy reading!

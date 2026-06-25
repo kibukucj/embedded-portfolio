@@ -1,4 +1,6 @@
-# Week 4 (Monday): Advanced C Data Structures & Memory Management
+# Advanced C Data Structures & Memory Management
+
+<span class="week-tag">Week 04 · Monday</span>
 
 ## Objective
 > To transition beyond basic variables and static arrays by mastering complex data grouping and dynamic memory allocation in C. The goal was to build a memory-efficient student record system utilizing `struct`, `enum`, `union`, and runtime memory functions like `malloc` and `free`.

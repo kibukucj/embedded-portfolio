@@ -1,4 +1,6 @@
-# Week 4 (Wednesday): Temperature & Humidity Sensing and Non-Blocking Logic
+# Temperature & Humidity Sensing and Non-Blocking Logic
+
+<span class="week-tag">Week 04 · Wednesday</span>
 
 ## Objective
 > To interface the Raspberry Pi Pico with a DHT22 temperature and humidity sensor.

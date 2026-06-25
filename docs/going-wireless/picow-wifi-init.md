@@ -1,4 +1,6 @@
-# Week 6 (Monday): Raspberry Pi Pico W & CircuitPython Initialization
+# Raspberry Pi Pico W & CircuitPython Initialization
+
+<span class="week-tag">Week 06 · Monday</span>
 
 ## Objective
 > To provision a new Raspberry Pi Pico W with the CircuitPython firmware and verify its execution environment by flashing the onboard LED. This marks the transition into wireless-capable embedded hardware.
