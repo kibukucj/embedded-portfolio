@@ -1,0 +1,567 @@
+/* ============================================================
+   JUNE'S EMBEDDED SYSTEMS PORTFOLIO — extra.css
+   Theme: Minimal Terminal / Oscilloscope
+   Palette: Void Black | Signal Teal | Data Blue | Amber Warn
+   ============================================================ */
+
+/* ── 0. FONTS ─────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&display=swap');
+
+/* ── 1. DESIGN TOKENS ─────────────────────────────────────── */
+:root {
+  --paper:       #0c0f13;              /* void black — main background    */
+  --paper-2:     #111519;              /* surface — card / panel          */
+  --paper-shade: #171d25;              /* elevated surface                */
+  --line:        #1d2733;              /* structural border               */
+  --line-hi:     #2a3f57;             /* highlighted border              */
+
+  --teal:        #00e5c0;              /* primary accent — signal teal    */
+  --teal-dim:    rgba(0, 229, 192, 0.07);
+  --blue:        #2d8cff;              /* secondary — data blue           */
+  --blue-dim:    rgba(45, 140, 255, 0.10);
+  --amber:       #e5a000;              /* warning / tertiary              */
+
+  --ink:         #c8d8e8;              /* primary text — cool light       */
+  --muted:       #5a7491;              /* secondary text                  */
+  --faint:       #2a3f57;             /* structural only                 */
+
+  --serif:       'IBM Plex Sans', system-ui, sans-serif;
+  --display:     'IBM Plex Mono', 'Space Mono', monospace;
+  --mono:        'IBM Plex Mono', 'Fira Code', monospace;
+  --radius:      2px;
+  --radius-lg:   2px;
+}
+
+/* ── 2. GLOBAL ─────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--paper);
+  font-family: var(--serif);
+  font-size: 0.95rem;
+  /* Subtle CRT scanline texture — replaces paper grain */
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 229, 192, 0.012) 2px,
+      rgba(0, 229, 192, 0.012) 4px
+    );
+}
+
+/* ── 3. HEADER / NAV BAR ──────────────────────────────────── */
+.md-header {
+  background-color: var(--paper-2) !important;
+  color: var(--ink) !important;
+  border-bottom: 1px solid var(--line-hi);
+  box-shadow: none;
+}
+
+.md-header__button.md-logo,
+.md-header__button {
+  color: var(--muted) !important;
+}
+
+/* Site title — monospace masthead, all-caps */
+.md-header__title {
+  font-family: var(--display) !important;
+  font-size: 0.82rem !important;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase;
+  color: var(--teal) !important;
+}
+
+/* Top-level tabs */
+.md-tabs {
+  background-color: var(--paper) !important;
+  border-bottom: 1px solid var(--line);
+}
+
+.md-tabs__link {
+  font-family: var(--display) !important;
+  font-size: 0.68rem !important;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted) !important;
+  opacity: 1 !important;
+  transition: color 0.15s ease;
+}
+
+.md-tabs__link--active,
+.md-tabs__link:hover {
+  color: var(--teal) !important;
+}
+
+/* ── 4. SIDEBAR / NAVIGATION ──────────────────────────────── */
+.md-sidebar {
+  background-color: var(--paper);
+}
+
+.md-nav__title {
+  font-family: var(--display) !important;
+  font-size: 0.6rem !important;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--faint) !important;
+  padding-top: 1.4rem;
+  background-color: var(--paper) !important;
+  box-shadow: none !important;
+}
+
+.md-nav__title,
+.md-nav--lifted > .md-nav__title,
+.md-nav--integrated > .md-nav__title {
+  font-family: var(--display) !important;
+  font-size: 0.6rem !important;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--faint) !important;
+  padding-top: 1.4rem;
+  background-color: var(--paper) !important;
+  box-shadow: none !important;
+}
+
+.md-nav__link {
+  font-family: var(--serif) !important;
+  font-size: 0.82rem !important;
+  color: var(--muted) !important;
+  letter-spacing: 0;
+  transition: color 0.12s ease, padding-left 0.12s ease;
+  border-radius: var(--radius);
+}
+
+.md-nav__link:hover {
+  color: var(--ink) !important;
+  padding-left: 0.4rem;
+}
+
+.md-nav__link--active {
+  color: var(--teal) !important;
+  background: var(--teal-dim) !important;
+  border-left: 2px solid var(--teal);
+  padding-left: 0.5rem;
+  font-weight: 500;
+}
+
+/* ── 5. MAIN CONTENT AREA ─────────────────────────────────── */
+.md-main {
+  background-color: var(--paper);
+}
+
+.md-content {
+  background-color: transparent;
+  max-width: 1080px;
+}
+
+/* Article wrapper — clean surface, left accent rule */
+.md-content__inner {
+  padding: 2.2rem 2.6rem 3rem;
+  background-color: var(--paper-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: none;
+  margin: 1.2rem 1rem 2rem;
+  position: relative;
+}
+
+/* Remove decorative tape strip */
+.md-content__inner::before {
+  display: none;
+}
+
+.md-grid {
+  max-width: 1380px;
+}
+
+/* ── 6. TYPOGRAPHY ────────────────────────────────────────── */
+
+/* H1 — monospace all-caps */
+.md-typeset h1 {
+  font-family: var(--display) !important;
+  font-size: 1.5rem !important;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--ink) !important;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+  line-height: 1.2;
+}
+
+/* Version / week tag */
+.week-tag {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal);
+  background: var(--teal-dim);
+  border: 1px solid var(--teal);
+  border-radius: var(--radius);
+  padding: 0.2em 0.7em;
+  transform: none;
+  margin: 0.4rem 0 0.3rem;
+}
+
+/* H2 — uppercase label with comment prefix */
+.md-typeset h2 {
+  font-family: var(--display) !important;
+  font-size: 0.75rem !important;
+  font-weight: 700;
+  color: var(--muted) !important;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-top: 0.3rem;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid var(--line) !important;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.md-typeset h2::before {
+  content: "//";
+  color: var(--teal);
+  font-size: 0.9em;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+/* H3 */
+.md-typeset h3 {
+  font-family: var(--display) !important;
+  font-size: 0.85rem !important;
+  font-weight: 600;
+  font-style: normal;
+  color: var(--teal) !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 1.8rem;
+}
+
+/* Body text */
+.md-typeset p,
+.md-typeset li {
+  font-family: var(--serif);
+  font-size: 0.92rem;
+  line-height: 1.8;
+  color: var(--ink);
+}
+
+.md-typeset p {
+  max-width: 99ch;
+}
+
+/* ── 7. HORIZONTAL RULE ──────────────────────────────────── */
+.md-typeset hr {
+  border: none;
+  height: 0;
+  border-top: 1px solid var(--line);
+  margin: 2.4rem 0;
+}
+
+/* ── 8. BLOCKQUOTE — terminal stdout ─────────────────────── */
+.md-typeset blockquote {
+  background-color: var(--teal-dim);
+  border-left: 2px solid var(--teal);
+  border-radius: var(--radius);
+  padding: 1rem 1.4rem;
+  margin: 1.5rem 0;
+  font-family: var(--mono);
+  font-style: normal;
+  font-size: 0.85em;
+  color: var(--muted);
+  position: relative;
+  transform: none;
+  box-shadow: none;
+}
+
+.md-typeset blockquote::before {
+  content: "...";
+  position: absolute;
+  top: -0.65rem;
+  left: 0.8rem;
+  background: var(--paper-2);
+  color: var(--teal);
+  font-family: var(--mono);
+  font-style: normal;
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  padding: 0.1em 0.5em;
+  border-radius: var(--radius);
+  border: 1px solid var(--teal);
+}
+
+/* ── 9. CODE — INLINE ─────────────────────────────────────── */
+.md-typeset code:not(pre code) {
+  background-color: var(--paper-shade);
+  color: var(--teal);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0.15em 0.45em;
+  font-family: var(--mono);
+  font-size: 0.82em;
+  font-weight: 400;
+}
+
+/* ── 10. CODE — BLOCK ─────────────────────────────────────── */
+.md-typeset pre {
+  background-color: #090c10 !important;
+  border: 1px solid var(--line-hi);
+  border-radius: var(--radius);
+  box-shadow: none;
+  position: relative;
+  overflow: visible;
+  margin: 1.8rem 0;
+}
+
+/* Terminal prompt label */
+.md-typeset pre::before {
+  content: ">";
+  position: absolute;
+  top: -0.65rem;
+  left: 1rem;
+  background: var(--paper-2);
+  color: var(--teal);
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  padding: 0.1em 0.5em;
+  transform: none;
+  border-radius: var(--radius);
+  border: 1px solid var(--teal);
+  pointer-events: none;
+}
+
+.md-typeset pre > code {
+  background: transparent !important;
+  font-family: var(--mono) !important;
+  font-size: 0.8rem !important;
+  line-height: 1.7;
+  color: #8fb4d4;
+  padding: 1.3rem 1.4rem !important;
+  border-radius: var(--radius);
+  display: block;
+}
+
+/* Syntax tokens — cool-toned */
+.highlight .k,
+.highlight .kd,
+.highlight .kn { color: #7ec8e3 !important; }
+.highlight .s,
+.highlight .s1,
+.highlight .s2 { color: #00e5c0 !important; }
+.highlight .c,
+.highlight .cm,
+.highlight .c1 { color: #2f4b63 !important; font-style: normal; }
+.highlight .n,
+.highlight .nv  { color: #8fb4d4 !important; }
+.highlight .m,
+.highlight .mi  { color: #e5a000 !important; }
+
+/* ── 11. COPY BUTTON ──────────────────────────────────────── */
+.md-clipboard {
+  color: var(--faint) !important;
+  transition: color 0.15s;
+}
+
+.md-clipboard:hover {
+  color: var(--teal) !important;
+  transform: none;
+}
+
+/* ── 12. TABLES — data grid ───────────────────────────────── */
+.md-typeset table:not([class]) {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  font-family: var(--mono);
+  font-size: 0.82rem;
+}
+
+.md-typeset table:not([class]) thead th {
+  background-color: var(--paper-shade);
+  color: var(--muted);
+  font-family: var(--display);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--line-hi);
+  padding: 0.75rem 1rem;
+}
+
+.md-typeset table:not([class]) tbody tr {
+  border-bottom: 1px solid var(--line);
+  transition: background 0.1s ease;
+}
+
+.md-typeset table:not([class]) tbody tr:hover {
+  background-color: var(--teal-dim);
+}
+
+.md-typeset table:not([class]) td {
+  color: var(--muted);
+  padding: 0.65rem 1rem;
+}
+
+/* ── 13. HYPERLINKS ───────────────────────────────────────── */
+.md-typeset a {
+  color: var(--teal);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line-hi);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.md-typeset a:hover {
+  color: var(--ink);
+  border-bottom-color: var(--teal);
+}
+
+/* ── 14. LISTS ─────────────────────────────────────────────── */
+.md-typeset ul > li::marker {
+  color: var(--teal);
+  content: "— ";
+}
+
+.md-typeset ol > li::marker {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-weight: 400;
+}
+
+/* ── 15. ADMONITIONS ─────────────────────────────────────── */
+.md-typeset .admonition {
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background-color: var(--paper-2);
+  font-family: var(--serif);
+  font-size: 0.88rem;
+  box-shadow: none;
+}
+
+.md-typeset .admonition-title {
+  font-family: var(--display) !important;
+  font-size: 0.68rem !important;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.md-typeset .admonition.note {
+  border-left: 3px solid var(--teal);
+}
+.md-typeset .admonition.note > .admonition-title {
+  background-color: var(--teal-dim);
+  color: var(--teal);
+}
+
+.md-typeset .admonition.warning {
+  border-left: 3px solid var(--amber);
+}
+.md-typeset .admonition.warning > .admonition-title {
+  background-color: rgba(229, 160, 0, 0.08);
+  color: var(--amber);
+}
+
+/* ── 16. FOOTER ────────────────────────────────────────────── */
+.md-footer {
+  background-color: var(--paper-2);
+  border-top: 1px solid var(--line);
+}
+
+.md-footer-meta {
+  background-color: var(--paper-2);
+}
+
+.md-footer__link {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--muted) !important;
+  transition: color 0.15s;
+}
+
+.md-footer__link:hover {
+  color: var(--teal) !important;
+}
+
+/* ── 17. SCROLLBAR ────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--paper);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--line-hi);
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--teal);
+}
+
+/* ── 18. SEARCH ────────────────────────────────────────────── */
+.md-search__form {
+  background-color: var(--paper-shade) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: var(--radius) !important;
+}
+
+.md-search__input {
+  font-family: var(--mono) !important;
+  font-size: 0.82rem !important;
+  color: var(--ink) !important;
+}
+
+.md-search__input::placeholder {
+  color: var(--faint) !important;
+  font-family: var(--mono) !important;
+}
+
+.md-search-result__article {
+  font-family: var(--serif);
+  font-size: 0.85rem;
+}
+
+/* ── 19. READING PROGRESS — teal signal trace ────────────── */
+.md-header__inner::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--teal), var(--blue), transparent);
+  z-index: 9999;
+  pointer-events: none;
+}
+
+/* ── 20. SELECTION COLOR ──────────────────────────────────── */
+::selection {
+  background: var(--teal-dim);
+  color: var(--teal);
+}
